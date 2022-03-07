@@ -1,0 +1,81 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto ;
+  grid-gap: 10px;
+  background-color: #d1d0d0;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+.mat-progress-spinner{
+  margin:0 auto;
+}
+
+body {padding: 20px;
+  background-image: url="https://lumiere-a.akamaihd.net/v1/images/sa_pixar_virtualbg_coco_16x9_9ccd7110.jpeg?region=0,0,1920,1080&width=768";
+  background-image: inherit;
+  background-image: initial;
+  background-image: revert;
+  background-image: unset;
+}
+
+div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.courses {
+  opacity: 0.75;
+  font-size: 0.75em;
+  min-width: 150px;
+  max-width: 500px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+button {
+height: 55px;
+width: 500px;
+}
+
+.mat-form-field {
+  width: 500px;
+}
+
+label {
+  display: block;
+  font: 1rem 'Fira Sans', sans-serif;
+}
+
+label {
+  margin: .4rem 0;
+}
+
+
+:host {
+  display: block;
+}
+
+.insert-remove-container {
+  border: 1px solid #dddddd;
+  margin-top: 1em;
+  padding: 20px 20px 0px 20px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+}

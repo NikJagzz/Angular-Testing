@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fir-demo-463af": {
+      "hosting": {
+        "Hello-World": [
+          "fir-demo-463af"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fir-demo-463af"
+  }
+}

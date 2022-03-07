@@ -1,0 +1,89 @@
+<div class="grid-container">
+<div>
+  <h1> Angular </h1>
+</div>
+  <courses> </courses>
+</div>
+
+<div class="grid-container">
+
+<div>
+  <mat-checkbox>Enrole to this university </mat-checkbox>
+</div>
+
+<div>
+  <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+  <mat-progress-spinner mode="determinate" value=75></mat-progress-spinner>
+  <mat-progress-spinner mode="determinate" value=50 color='accent'></mat-progress-spinner>
+  <mat-progress-spinner mode="determinate" value=25 color='warn'></mat-progress-spinner>
+</div>
+
+<div>
+  <select>
+    <option *ngFor="let courses of courses" [value]="courses.id" >{{ courses.name }}</option>
+  </select>
+</div>
+
+<div>
+  <mat-select class="courses" [(ngModel)]="course" >
+    <mat-option *ngFor="let courses of courses" [value]="courses.id" >{{ courses.name }}</mat-option>
+  </mat-select>
+</div>
+
+<div>
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Module</mat-label>
+      <input matInput placeholder="Ex. CTEC0001" value="">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+  </form>
+  </div>
+
+  <div>
+  <nav>
+    <button (click)="toggle()">Toggle Insert/Remove</button>
+  </nav>
+
+  <div @myInsertRemoveTrigger *ngIf="isShown" class="insert-remove-container">
+    <p>The box is inserted</p>
+  </div>
+  </div>
+
+<div>
+  <mat-form-field>
+    <input ngModel #pnumber="ngModel" name="pnumber" type="number" matInput placeholder="(P Number)" required>
+    <mat-hint>This will be your university email</mat-hint>
+    <span matSuffix>@dmu.ac.uk</span>
+    <span matPrefix>Email: P</span>
+    <mat-error>
+      The P number field is required
+    </mat-error>
+  </mat-form-field>
+</div>
+
+<div>
+  <label for="meeting-time">Choose a time for your appointment:</label>
+  <input type="datetime-local" id="meeting-time" name="meeting-time" value=2000-01-01T00:00 min="2000-01-01T00:00"
+    max="2021-030-30T00:00">
+</div>
+
+<div>
+<mat-form-field appearance="fill">
+  <mat-label>Message</mat-label>
+  <input matInput value="Message" #message>
+</mat-form-field>
+
+<mat-form-field appearance="fill" >
+  <mat-label>Action</mat-label>
+  <input matInput value="Action" #action>
+
+</mat-form-field>
+
+<button mat-stroked-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+</div>
+</div>
